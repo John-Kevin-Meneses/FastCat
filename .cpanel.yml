@@ -1,4 +1,4 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/apfckevin/FastCatBooking/
-    - /bin/rsync -av --exclude='.git' ./ $DEPLOYPATH
+    - export DEPLOYPATH=/home/apfckevin/FastCatBook/
+    - /bin/rsync -av --delete --exclude='.git' --exclude='.env' ./ $DEPLOYPATH
