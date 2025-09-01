@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/apfckevin/FastCatBooking/
+    - /bin/cp -r * $DEPLOYPATH
