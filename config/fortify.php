@@ -3,6 +3,17 @@
 use Laravel\Fortify\Features;
 
 return [
+    /*
+    |--------------------------------------------------------------------------
+    | Disable Default Fortify Routes
+    |--------------------------------------------------------------------------
+    |
+    | This prevents Fortify from auto-registering /login, /register, etc.
+    | We handle them manually inside App\Providers\FortifyServiceProvider.
+    |
+    */
+
+    'routes' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -103,13 +114,13 @@ return [
     */
 
     'features' => [
-        Features::registration(),
-        Features::resetPasswords(),
-        Features::updateProfileInformation(),
-        Features::updatePasswords(),
-        Features::twoFactorAuthentication([
-            'confirm' => true,
-            'confirmPassword' => true,
-        ]),
+        // Features::registration(),
+        // Features::resetPasswords(),
+        // Features::updateProfileInformation(),
+        // Features::updatePasswords(),
+        // Features::twoFactorAuthentication([
+        //     'confirm' => true,
+        //     'confirmPassword' => true,
+        // ]),
     ],
 ];
